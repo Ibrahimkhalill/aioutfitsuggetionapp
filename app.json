@@ -1,0 +1,82 @@
+{
+	"expo": {
+		"name": "StyleNTU",
+		"slug": "stylentu",
+		"scheme": "stylentu",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"icon": "./app/assets/icon.png",
+		"newArchEnabled": true,
+		"splash": {
+			"image": "./app/assets/splash-icon.png",
+			"resizeMode": "contain",
+			"backgroundColor": "#ffffff"
+		},
+		"ios": {
+			"supportsTablet": true,
+			"infoPlist": {
+				"NSAppTransportSecurity": {
+					"NSAllowsArbitraryLoads": true
+				}
+			},
+			"bundleIdentifier": "com.aininja.outfitsuggestionsapp",
+			"runtimeVersion": "1.0.0"
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./app/assets/adaptive-icon.png",
+				"backgroundColor": "#ffffff"
+			},
+			"permissions": [
+				"INTERNET",
+				"RECEIVE_BOOT_COMPLETED",
+				"VIBRATE",
+				"com.google.android.c2dm.permission.RECEIVE",
+				"android.permission.CAMERA",
+				"android.permission.RECORD_AUDIO",
+				"INTERNET",
+				"RECEIVE_BOOT_COMPLETED",
+				"VIBRATE",
+				"com.google.android.c2dm.permission.RECEIVE",
+				"android.permission.CAMERA",
+				"android.permission.RECORD_AUDIO"
+			],
+			"runtimeVersion": {
+				"policy": "appVersion"
+			}
+		},
+		"web": {
+			"favicon": "./app/assets/favicon.png"
+		},
+		"updates": {
+			"enabled": false,
+			"url": "https://u.expo.dev/5d70b14e-c010-4770-8597-4a51ca07b9be"
+		},
+		"plugins": [
+			"expo-font",
+			"expo-localization",
+			"expo-notifications",
+			[
+				"expo-camera",
+				{
+					"cameraPermission": "Allow $(PRODUCT_NAME) to access your camera",
+					"microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone",
+					"recordAudioAndroid": true
+				}
+			],
+			[
+				"expo-splash-screen",
+				{
+					"backgroundColor": "#ffffff",
+					"image": "./app/assets/splash-icon.png",
+					"imageWidth": 200
+				}
+			]
+		],
+		"extra": {
+			"eas": {
+				"projectId": "5d70b14e-c010-4770-8597-4a51ca07b9be"
+			}
+		}
+	}
+}
